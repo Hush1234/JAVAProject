@@ -52,6 +52,8 @@ class JPanel02 extends JPanel{        // 2번째 패널
     private JTextField textField;
     private JPasswordField passwordField;
     private PJ_GUI win;
+    private String word;
+    private final static String newline = "\n";
     
     public JPanel02(PJ_GUI win) {
         setLayout(null);
@@ -69,6 +71,8 @@ class JPanel02 extends JPanel{        // 2번째 패널
         jsp.setSize(300, 200);
         jsp.setLocation(5, 50);
         add(jsp);
+        //tf.setText(word);
+        
         
         JButton btn1 = new JButton("입력");
         add(btn1);
@@ -77,11 +81,17 @@ class JPanel02 extends JPanel{        // 2번째 패널
         
         btn1.addActionListener(new ActionListener() {
             @Override
-            public void actionPerformed(ActionEvent arg0) {
+            public void actionPerformed(ActionEvent e) {
                 //한명씩 입력
                 //공백을 기준으로 내용을 나눔
+            	String word = tf.getText();
+            	ta.append(word + newline);
+            	tf.selectAll();
+            	ta.setCaretPosition(ta.getDocument().getLength());
+            
             	
             }
+            
         });
     }
 }
