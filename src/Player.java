@@ -47,7 +47,7 @@ public class Player extends JFrame {
 				boolean ch = true;
 				public void actionPerformed(ActionEvent e) {
 					JTextField t = (JTextField)e.getSource();
-					
+					ta.append(name[i]+">>" + t.getText() + "\n");
 					if(b(t.getText()) == false)
 					{
 						ta.append(name[i]+" ÆÐ¹è\n");
@@ -61,7 +61,6 @@ public class Player extends JFrame {
 					}else{
 						i++;
 					}
-					ta.append(name[i]+">>" + t.getText() + "\n");
 					t.setText("");
 				}
 			});
