@@ -4,6 +4,7 @@ public class PJ_Game {
 	{
 		System.out.println("hi");
 		System.out.println("hi");
+		System.out.println("hi");
 	}
 
 }
