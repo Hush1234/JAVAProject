@@ -56,20 +56,6 @@ class JPanel02 extends JPanel{        // 2번째 패널
     public JPanel02(PJ_GUI win) {
         setLayout(null);
         this.win = win;
-//        JLabel lblLbl = new JLabel("단어 입력창");
-//        lblLbl.setBounds(160, 20, 70, 15);
-//        add(lblLbl);
-//       
-//        textField = new JTextField();
-//        textField.setBounds(10, 50, 360, 20);
-//        add(textField);
-//        textField.setColumns(10);
-//        
-//        JTextArea ta = new JTextArea(); 
-//        JScrollPane jsp = new JScrollPane(ta); //창 스크롤
-//        jsp.setSize(300, 300);
-//        jsp.setLocation(30, 80);
-//        add(jsp);
 
         //입력 공간
         JTextField tf = new JTextField(); 
@@ -83,6 +69,20 @@ class JPanel02 extends JPanel{        // 2번째 패널
         jsp.setSize(300, 200);
         jsp.setLocation(5, 50);
         add(jsp);
+        
+        JButton btn1 = new JButton("입력");
+        add(btn1);
+        btn1.setBounds(310, 5, 60, 30);
+        
+        
+        btn1.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent arg0) {
+                //한명씩 입력
+                //공백을 기준으로 내용을 나눔
+            	
+            }
+        });
     }
 }
 
