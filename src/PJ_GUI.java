@@ -1,4 +1,3 @@
-package JavaProject;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javax.swing.*;
@@ -8,9 +7,9 @@ class JPanel01 extends JPanel {  // 1번째 패널
     
     private JButton j1;
     private JButton j2;
-    private JPanelTest win;
+    private PJ_GUI win;
     
-    public JPanel01(JPanelTest win){
+    public JPanel01(PJ_GUI win){
         this.win = win;
         setLayout(null);
         
@@ -52,9 +51,9 @@ class JPanel01 extends JPanel {  // 1번째 패널
 class JPanel02 extends JPanel{        // 2번째 패널
     private JTextField textField;
     private JPasswordField passwordField;
-    private JPanelTest win;
+    private PJ_GUI win;
     
-    public JPanel02(JPanelTest win) {
+    public JPanel02(PJ_GUI win) {
         setLayout(null);
         this.win = win;
 //        JLabel lblLbl = new JLabel("단어 입력창");
@@ -91,9 +90,9 @@ class JPanel03 extends JPanel {  // 3번째 패널
     
     private JButton j1;
     private JButton j2;
-    private JPanelTest win;
+    private PJ_GUI win;
     
-    public JPanel03(JPanelTest win){
+    public JPanel03(PJ_GUI win){
         this.win = win;
         setLayout(null);
         
@@ -132,7 +131,7 @@ class JPanel03 extends JPanel {  // 3번째 패널
 }
 
 
-class JPanelTest extends JFrame{
+class PJ_GUI extends JFrame{
     
     public JPanel01 jpanel01 = null;
     public JPanel02 jpanel02 = null;
@@ -155,7 +154,7 @@ class JPanelTest extends JFrame{
     
     public static void main(String[] args) {
         
-       JPanelTest win = new JPanelTest();            
+       PJ_GUI win = new PJ_GUI();            
         
         win.setTitle("끝말잇기 게임");
         win.jpanel01 = new JPanel01(win);
